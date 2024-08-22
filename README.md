@@ -1,10 +1,9 @@
-GPT: replit.com/@DerekSheen/CS-Club-GPT
-Pandas Demo: replit.com/@DerekSheen/Pandas-Demo
-NumPy Demo: replit.com/@DerekSheen/NumPy-Demo
-Matplotlib Demo: replit.com/@DerekSheen/CS-Club-MatplotLib
-API Flask Demo: replit.com/@DerekSheen/CS-Club-Flask
-Game Development Geometry Dash: replit.com/@SoheilChavoshi/GeometryDashClone-Completed
-Ecommerce Website Example: stackblitz.com/edit/react-4ex8uy
-React Tutorial: stackblitz.com/edit/react-41xv3j
-Score Tracker: replit.com/@DerekSheen/2024-score-tracker
-
+- [GPT](https://replit.com/@DerekSheen/CS-Club-GPT)
+- [Pandas Demo](https://replit.com/@DerekSheen/Pandas-Demo)
+- [NumPy Demo](https://replit.com/@DerekSheen/NumPy-Demo)
+- [Matplotlib Demo](https://replit.com/@DerekSheen/CS-Club-MatplotLib)
+- [API Flask Demo](https://replit.com/@DerekSheen/CS-Club-Flask)
+- [Game Development Geometry Dash](https://replit.com/@SoheilChavoshi/GeometryDashClone-Completed)
+- [Ecommerce Website Example](https://stackblitz.com/edit/react-4ex8uy)
+- [React Tutorial](https://stackblitz.com/edit/react-41xv3j)
+- [Score Tracker](https://replit.com/@DerekSheen/2024-score-tracker)
