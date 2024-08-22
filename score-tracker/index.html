@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2>Ping Pong Score Tracker</h2>
+  <p>This is a website that keeps track of a ping pong match</p>
+  <div class="score-tracker">
+    <div class="player">
+      <h3>Player 1</h3>
+      <div id="score-one">0</div>
+      <button onclick="incrementScore(1)">+</button>
+    </div>
+    <div class="player">
+      <h3>Player 2</h3>
+      <div id="score-two">0</div>
+      <button onclick="incrementScore(2)">+</button>
+    </div>
+  </div>
+      <button onclick="resetScore()">Reset</button>
+      <script src="script.js"></script>
+</body>
+
+</html>

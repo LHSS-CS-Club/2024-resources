@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Chatbot</h1>
+  <div class="chat-container" id="chat-container">
+    <div class="chat-box" id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</body>
+<script>
+  async function sendMessage() {
+    const userInput = document.getElementById('user-input').value;
+    const chatBox = document.getElementById('chat-box');
+
+    // Display user message
+    const userMessage = document.createElement('div');
+    userMessage.classList.add('user-message');
+    userMessage.innerText = userInput;
+    chatBox.appendChild(userMessage);
+
+    // Clear input
+    document.getElementById('user-input').value = '';
+
+    // Call OpenAI API to get response
+    const response = await getOpenAIResponse(userInput);
+
+    // Display AI response
+    const aiMessage = document.createElement('div');
+    aiMessage.classList.add('ai-message');
+    aiMessage.innerText = response;
+    chatBox.appendChild(aiMessage);
+
+    // Scroll to bottom of chat box
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  async function getOpenAIResponse(input) {
+    const response = await fetch('/call_api/'+input)
+    const data = await response.json();
+    return data.text;
+  }
+</script>
+</html>

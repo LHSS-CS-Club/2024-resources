@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <title>Document</title>
+</head>
+<body>
+  <h1>This is the food page. Press a button to get a random food item.</h1>
+
+  <button id="getRandomFoodBtn">Get Random Food</button>
+  </form>
+  <p>Food Given:</p> 
+  <div id="randomFood"></div>
+</body>
+<script>
+  document.getElementById('getRandomFoodBtn').addEventListener('click', function(event) {
+      event.preventDefault();  // Prevent default form submission behavior
+
+      fetch('/get_random_food')
+          .then(response => response.json())
+          .then(data => {
+              document.getElementById('randomFood').innerHTML = 'Random Food: ' + data.food;
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+});
+</script>
+</html>
